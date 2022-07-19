@@ -90,7 +90,8 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 0.5rem;
+    border-radius: 0.35rem;
+    position: relative;
 }
 
 .user {
@@ -119,4 +120,58 @@ header {
 .today {
     margin-top: 0;
     color: hsl(163, 72%, 41%);
+}
+
+.border-face::before {
+    content: '';
+    width: 100%;
+    background: hsl(208, 92%, 53%);
+    height: 0.25rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+.border-twitter::before {
+    content: '';
+    width: 100%;
+    background: hsl(203, 89%, 53%);
+    height: 0.25rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+.border-insta::before {
+    content: '';
+    width: 100%;
+    background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    height: 0.25rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+.border-youtube::before {
+    content: '';
+    width: 100%;
+    background: hsl(348, 97%, 39%);
+    height: 0.25rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+.overview {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.main-down {
+    display: grid;
+    grid-template-columns: 16rem 16rem 16rem 16rem;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.main-down div {
+    background-color: rgb(37, 43, 67);
+    padding: 1rem;
+    border-radius: 0.35rem;
 }
