@@ -35,7 +35,8 @@ header {
     font-weight: bolder;
 }
 
-.btn-theme {
+#btn-theme {
+    visibility: visible;
     width: 3rem;
     height: 1.5rem;
     border-radius: 1rem;
@@ -43,9 +44,11 @@ header {
     position: relative;
     margin-left: 0.5rem;
     background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    cursor: pointer;
 }
 
-.btn-theme::after {
+#btn-theme::after {
+    visibility: visible;
     content: '';
     position: absolute;
     width: 1.1rem;
@@ -56,7 +59,8 @@ header {
     border-radius: 1.5rem;
 }
 
-.btn-theme::before {
+#btn-theme::before {
+    visibility: visible;
     content: '';
     position: absolute;
     width: 1.1rem;
@@ -84,7 +88,7 @@ header {
     margin-top: 1rem;
 }
 
-.main-up div {
+.up {
     background-color: rgb(37, 43, 67);
     width: 16rem;
     display: flex;
@@ -92,6 +96,7 @@ header {
     align-items: center;
     border-radius: 0.35rem;
     position: relative;
+    cursor: pointer;
 }
 
 .user {
@@ -170,8 +175,51 @@ header {
     row-gap: 2rem;
 }
 
-.main-down div {
+.down {
     background-color: rgb(37, 43, 67);
     padding: 1rem;
     border-radius: 0.35rem;
+    cursor: pointer;
+}
+
+.down div {
+    padding: 1rem;
+}
+
+.etiqueta:hover {
+    background: rgb(51, 58, 86);
+}
+
+.main-down div div {
+    display: flex;
+}
+
+.main-down div div span {
+    margin-right: auto;
+}
+
+.margin-null {
+    margin-right: 0 !important;
+}
+
+.tipo-dato {
+    color: hsl(228, 12%, 44%);
+    ;
+}
+
+.numero {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.positivo {
+    display: flex;
+    align-items: center;
+    color: hsl(163, 72%, 41%);
+}
+
+.negativo {
+    display: flex;
+    align-items: center;
+    color: hsl(356, 69%, 56%);
 }
