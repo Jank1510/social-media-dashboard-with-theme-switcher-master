@@ -7,9 +7,17 @@
     color: hsl(228, 45%, 44%);
 }
 
+.white-theme-body {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(230, 17%, 14%);
+}
+
+.dark-theme-body {
+    background-color: hsl(230, 17%, 14%);
+    color: hsl(0, 0%, 100%);
+}
+
 body {
-    background-color: rgb(29, 32, 41);
-    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,8 +96,15 @@ header {
     margin-top: 1rem;
 }
 
-.up {
+.dark-mode-card {
     background-color: rgb(37, 43, 67);
+}
+
+.white-mode-card {
+    background-color: hsl(227, 47%, 96%);
+}
+
+.up {
     width: 16rem;
     display: flex;
     flex-direction: column;
@@ -176,7 +191,6 @@ header {
 }
 
 .down {
-    background-color: rgb(37, 43, 67);
     padding: 1rem;
     border-radius: 0.35rem;
     cursor: pointer;
