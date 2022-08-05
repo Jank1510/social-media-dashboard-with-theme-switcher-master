@@ -23,51 +23,23 @@ body {
     align-items: center;
 }
 
-.container {
-    width: 80%;
-}
-
-header {
-    display: flex;
-    flex-direction: row;
-}
-
-.header-right {
-    margin-left: auto;
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-}
-
 .text-theme {
     font-weight: bolder;
 }
 
-#btn-theme {
-    visibility: visible;
-    width: 3rem;
-    height: 1.5rem;
-    border-radius: 1rem;
-    border: none;
-    position: relative;
-    margin-left: 0.5rem;
-    background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-    cursor: pointer;
-}
-
-#btn-theme::after {
+.btn-theme-on::after {
     visibility: visible;
     content: '';
     position: absolute;
     width: 1.1rem;
     height: 1.1rem;
-    background-color: rgb(52, 57, 86);
+    background-color: white;
     top: 0.2rem;
     right: 0.2rem;
     border-radius: 1.5rem;
 }
 
-#btn-theme::before {
+.btn-theme-off::after {
     visibility: visible;
     content: '';
     position: absolute;
@@ -79,39 +51,18 @@ header {
     border-radius: 1.5rem;
 }
 
-.header-left h1 {
-    margin-bottom: 0;
-}
-
 .header-left p {
     margin-top: 0;
     color: hsl(228, 12%, 44%);
     font-weight: bold;
 }
 
-.main-up {
-    display: flex;
-    flex-direction: row;
-    column-gap: 2rem;
-    margin-top: 1rem;
+.dark-mode-card:hover {
+    background: rgb(51, 58, 86);
 }
 
-.dark-mode-card {
-    background-color: rgb(37, 43, 67);
-}
-
-.white-mode-card {
-    background-color: hsl(227, 47%, 96%);
-}
-
-.up {
-    width: 16rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 0.35rem;
-    position: relative;
-    cursor: pointer;
+.white-mode-card:hover {
+    background: rgb(225, 227, 240);
 }
 
 .user {
@@ -142,7 +93,7 @@ header {
     color: hsl(163, 72%, 41%);
 }
 
-.border-face::before {
+#border-face::before {
     content: '';
     width: 100%;
     background: hsl(208, 92%, 53%);
@@ -151,7 +102,7 @@ header {
     border-top-right-radius: 1.5rem;
 }
 
-.border-twitter::before {
+#border-twitter::before {
     content: '';
     width: 100%;
     background: hsl(203, 89%, 53%);
@@ -160,7 +111,7 @@ header {
     border-top-right-radius: 1.5rem;
 }
 
-.border-insta::before {
+#border-insta::before {
     content: '';
     width: 100%;
     background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
@@ -169,7 +120,7 @@ header {
     border-top-right-radius: 1.5rem;
 }
 
-.border-youtube::before {
+#border-youtube::before {
     content: '';
     width: 100%;
     background: hsl(348, 97%, 39%);
@@ -181,31 +132,6 @@ header {
 .overview {
     font-weight: bold;
     font-size: 1.5rem;
-}
-
-.main-down {
-    display: grid;
-    grid-template-columns: 16rem 16rem 16rem 16rem;
-    column-gap: 2rem;
-    row-gap: 2rem;
-}
-
-.down {
-    padding: 1rem;
-    border-radius: 0.35rem;
-    cursor: pointer;
-}
-
-.down div {
-    padding: 1rem;
-}
-
-.etiqueta:hover {
-    background: rgb(51, 58, 86);
-}
-
-.main-down div div {
-    display: flex;
 }
 
 .main-down div div span {
@@ -236,4 +162,163 @@ header {
     display: flex;
     align-items: center;
     color: hsl(356, 69%, 56%);
+}
+
+@media (min-width: 350px) {
+    .container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .main-up {
+        display: block;
+        grid-template-columns: 16rem 16rem 16rem 16rem;
+        column-gap: 2rem;
+        margin-top: 1rem;
+    }
+    .main-down {
+        display: block;
+        grid-template-columns: 16rem 16rem 16rem 16rem;
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+    main {
+        width: 100%;
+    }
+    .dark-mode-card {
+        background-color: rgb(37, 43, 67);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0.35rem;
+        position: relative;
+        cursor: pointer;
+        margin-bottom: 1.2rem;
+    }
+    .white-mode-card {
+        background-color: hsl(227, 47%, 96%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0.35rem;
+        position: relative;
+        margin-bottom: 1.2rem;
+        cursor: pointer;
+    }
+    .header-right {
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+    }
+    #btn-theme {
+        visibility: visible;
+        width: 3rem;
+        height: 1.5rem;
+        border-radius: 1rem;
+        border: none;
+        position: relative;
+        margin-left: auto;
+        background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+        cursor: pointer;
+    }
+    .hr {
+        display: block;
+        width: 100%;
+        color: hsl(228, 12%, 44%);
+        margin-bottom: 1rem;
+    }
+    .header-left h1 {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+    }
+    .main-down div div {
+        padding: 1rem;
+        display: flex;
+        width: 85%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .container {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header {
+        display: flex;
+        flex-direction: row;
+        width: 70rem;
+    }
+    .main-up {
+        display: grid;
+        grid-template-columns: 16rem 16rem 16rem 16rem;
+        column-gap: 2rem;
+        margin-top: 1rem;
+    }
+    .main-down {
+        display: grid;
+        grid-template-columns: 16rem 16rem 16rem 16rem;
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+    main {
+        width: auto;
+    }
+    .dark-mode-card {
+        background-color: rgb(37, 43, 67);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0.35rem;
+        position: relative;
+        cursor: pointer;
+        margin-bottom: 0;
+    }
+    .white-mode-card {
+        background-color: hsl(227, 47%, 96%);
+        width: 16rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0.35rem;
+        position: relative;
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+    .header-right {
+        margin-left: auto;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+    #btn-theme {
+        visibility: visible;
+        width: 3rem;
+        height: 1.5rem;
+        border-radius: 1rem;
+        border: none;
+        position: relative;
+        margin-left: 0.5rem;
+        background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+        cursor: pointer;
+    }
+    .hr {
+        display: none;
+    }
+    .header-left h1 {
+        margin-bottom: 0;
+        font-size: 2rem;
+    }
+    .main-down div div {
+        padding: 1rem;
+        display: flex;
+        width: 13rem;
+    }
 }
