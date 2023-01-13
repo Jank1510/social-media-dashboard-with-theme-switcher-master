@@ -1,5 +1,5 @@
 # social-media-dashboard-with-theme-switcher-master
-social media dashboard with theme switcher master CHALLENGE'
+social media dashboard with theme switcher master CHALLENGE finalizado ☑
 
 link:
 https://jank1510.github.io/social-media-dashboard-with-theme-switcher-master/
